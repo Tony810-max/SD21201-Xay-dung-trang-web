@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid vs Flexbox - Blog Detail</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-portfolio-icon-png-image_894644.jpg"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">NV</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container blog-detail-page">
+      <article class="blog-detail">
+        <header class="blog-detail-header">
+          <h1>CSS Grid vs Flexbox: Khi Nào Dùng Cái Nào?</h1>
+          <div class="blog-detail-meta">
+            <span class="date">10 Tháng 11, 2024</span>
+            <span class="category">CSS</span>
+            <span class="read-time">7 phút đọc</span>
+          </div>
+          <img
+            src="/placeholder.svg?height=400&width=800"
+            alt="CSS Layout Comparison"
+          />
+        </header>
+
+        <div class="blog-detail-content">
+          <h2>Giới Thiệu</h2>
+          <p>
+            CSS Grid và Flexbox đều là những công cụ layout mạnh mẽ được giới
+            thiệu vào CSS3. Nhưng khi nào bạn nên dùng cái nào? Bài viết này sẽ
+            giúp bạn hiểu rõ sự khác biệt và cách chọn công cụ phù hợp cho từng
+            trường hợp.
+          </p>
+
+          <h2>Flexbox là gì?</h2>
+          <p>
+            Flexbox (Flexible Box Layout) là một 1-dimensional layout model. Nó
+            tốt cho việc sắp xếp items theo một hàng hoặc một cột:
+          </p>
+          <pre><code>.container {
+  display: flex;
+  gap: 1rem;
+}
+
+.item {
+  flex: 1;
+}</code></pre>
+
+          <h2>CSS Grid là gì?</h2>
+          <p>
+            CSS Grid là một 2-dimensional layout model. Nó cho phép bạn kiểm
+            soát cả hàng và cột cùng một lúc:
+          </p>
+          <pre><code>.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}</code></pre>
+
+          <h2>Khi Nào Dùng Flexbox?</h2>
+          <ul>
+            <li>Sắp xếp items theo một chiều (hàng hoặc cột)</li>
+            <li>Navigation menu</li>
+            <li>Centered layout</li>
+            <li>Space between items</li>
+          </ul>
+
+          <h2>Khi Nào Dùng CSS Grid?</h2>
+          <ul>
+            <li>Layout phức tạp với nhiều hàng và cột</li>
+            <li>Dashboard layouts</li>
+            <li>Magazine-style layouts</li>
+            <li>Responsive grid layouts</li>
+          </ul>
+
+          <h2>Ví Dụ Thực Tế</h2>
+          <p>Sử dụng Flexbox cho navigation:</p>
+          <pre><code>nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+
+          <p>Sử dụng Grid cho dashboard:</p>
+          <pre><code>.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: 60px 1fr;
+  gap: 1rem;
+}</code></pre>
+
+          <h2>Kết Luận</h2>
+          <p>
+            Cả Flexbox và Grid đều hữu ích. Hãy chọn dựa trên nhu cầu layout của
+            bạn. Thường thì bạn sẽ sử dụng cả hai trong cùng một dự án!
+          </p>
+
+          <div class="blog-tags">
+            <span class="tag">CSS</span>
+            <span class="tag">Layout</span>
+            <span class="tag">Flexbox</span>
+            <span class="tag">CSS Grid</span>
+          </div>
+
+          <div class="blog-navigation">
+            <a href="blog.html" class="btn btn-secondary">← Quay Lại Blog</a>
+            <a href="blog-detail-3.html" class="btn btn-secondary"
+              >Bài Tiếp Theo →</a
+            >
+          </div>
+        </div>
+
+        <aside class="blog-sidebar">
+          <div class="related-posts">
+            <h3>Bài Viết Liên Quan</h3>
+            <ul>
+              <li>
+                <a href="blog-detail-1.html">React Hooks Cho Người Mới</a>
+              </li>
+              <li>
+                <a href="blog-detail-3.html">Web Performance Optimization</a>
+              </li>
+            </ul>
+          </div>
+          <div class="share-section">
+            <h3>Chia Sẻ Bài Viết</h3>
+            <div class="share-buttons">
+              <a href="#" class="share-btn">Facebook</a>
+              <a href="#" class="share-btn">Twitter</a>
+              <a href="#" class="share-btn">LinkedIn</a>
+            </div>
+          </div>
+        </aside>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Liên Hệ</h4>
+          <p>Email: Quangvu37781@gmail.com</p>
+          <p>Phone: (+84) 793.990.963</p>
+        </div>
+        <div class="footer-section">
+          <h4>Mạng Xã Hội</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/Tony810-max" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nguyen-quang-vu-fe/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/nguyenquangvu123"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nguyễn Quang Vũ. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

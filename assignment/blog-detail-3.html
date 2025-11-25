@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Performance - Blog Detail</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-portfolio-icon-png-image_894644.jpg"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">NV</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container blog-detail-page">
+      <article class="blog-detail">
+        <header class="blog-detail-header">
+          <h1>Web Performance: Tối Ưu Hóa Tốc Độ Trang Web</h1>
+          <div class="blog-detail-meta">
+            <span class="date">5 Tháng 11, 2024</span>
+            <span class="category">Backend</span>
+            <span class="read-time">8 phút đọc</span>
+          </div>
+          <img
+            src="/placeholder.svg?height=400&width=800"
+            alt="Performance Optimization"
+          />
+        </header>
+
+        <div class="blog-detail-content">
+          <h2>Tại Sao Performance Quan Trọng?</h2>
+          <p>
+            Hiệu năng web ảnh hưởng trực tiếp đến trải nghiệm người dùng và SEO.
+            Một trang web chậm có thể khiến người dùng rời đi, dẫn đến tăng
+            bounce rate và giảm conversion.
+          </p>
+
+          <h2>Lazy Loading Images</h2>
+          <p>
+            Một trong những cách tốt nhất để cải thiện performance là lazy
+            loading hình ảnh:
+          </p>
+          <pre><code>&lt;img src="image.jpg" loading="lazy" alt="Description" /&gt;</code></pre>
+
+          <h2>Code Splitting</h2>
+          <p>Chia nhỏ code của bạn để chỉ tải những gì cần thiết:</p>
+          <pre><code>import React, { Suspense, lazy } from 'react';
+
+const HeavyComponent = lazy(() => import('./HeavyComponent'));
+
+export default function App() {
+  return (
+    &lt;Suspense fallback={&lt;div&gt;Loading...&lt;/div&gt;}&gt;
+      &lt;HeavyComponent /&gt;
+    &lt;/Suspense&gt;
+  );
+}</code></pre>
+
+          <h2>Caching</h2>
+          <p>Sử dụng browser caching và service workers để giảm request:</p>
+          <pre><code>// Cache API response
+const cacheResponse = async (request) => {
+  const cache = await caches.open('my-cache');
+  const response = await cache.match(request);
+  
+  if (response) return response;
+  
+  const fetchResponse = await fetch(request);
+  cache.put(request, fetchResponse.clone());
+  return fetchResponse;
+};</code></pre>
+
+          <h2>Minify CSS và JavaScript</h2>
+          <p>Sử dụng build tools như webpack hoặc rollup để minify code:</p>
+          <ul>
+            <li>Giảm kích thước file</li>
+            <li>Tăng tốc độ download</li>
+            <li>Cải thiện parse time</li>
+          </ul>
+
+          <h2>Core Web Vitals</h2>
+          <p>Chú ý đến 3 metrics chính từ Google:</p>
+          <ul>
+            <li><strong>LCP (Largest Contentful Paint):</strong> < 2.5s</li>
+            <li><strong>FID (First Input Delay):</strong> < 100ms</li>
+            <li><strong>CLS (Cumulative Layout Shift):</strong> < 0.1</li>
+          </ul>
+
+          <h2>Tools để Đo Lường</h2>
+          <ul>
+            <li>Google PageSpeed Insights</li>
+            <li>Lighthouse</li>
+            <li>WebPageTest</li>
+            <li>GTmetrix</li>
+          </ul>
+
+          <h2>Kết Luận</h2>
+          <p>
+            Tối ưu hóa performance là quá trình liên tục. Hãy đo lường, phân
+            tích, và cải thiện thường xuyên. Người dùng sẽ cảm ơn bạn!
+          </p>
+
+          <div class="blog-tags">
+            <span class="tag">Performance</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Optimization</span>
+            <span class="tag">SEO</span>
+          </div>
+
+          <div class="blog-navigation">
+            <a href="blog.html" class="btn btn-secondary">← Quay Lại Blog</a>
+          </div>
+        </div>
+
+        <aside class="blog-sidebar">
+          <div class="related-posts">
+            <h3>Bài Viết Liên Quan</h3>
+            <ul>
+              <li>
+                <a href="blog-detail-1.html">React Hooks Cho Người Mới</a>
+              </li>
+              <li><a href="blog-detail-2.html">CSS Grid vs Flexbox</a></li>
+            </ul>
+          </div>
+          <div class="share-section">
+            <h3>Chia Sẻ Bài Viết</h3>
+            <div class="share-buttons">
+              <a href="#" class="share-btn">Facebook</a>
+              <a href="#" class="share-btn">Twitter</a>
+              <a href="#" class="share-btn">LinkedIn</a>
+            </div>
+          </div>
+        </aside>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Liên Hệ</h4>
+          <p>Email: Quangvu37781@gmail.com</p>
+          <p>Phone: (+84) 793.990.963</p>
+        </div>
+        <div class="footer-section">
+          <h4>Mạng Xã Hội</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/Tony810-max" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nguyen-quang-vu-fe/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/nguyenquangvu123"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nguyễn Quang Vũ. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

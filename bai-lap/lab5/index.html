@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyễn Quang Vũ - Lab 5</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- <div class="wrapper"> -->
+      <div class="heading-form">
+        <h1>Biểu mẫu thông tin</h1>
+        <p>Vui lòng điền các thông tin dưới đây</p>
+
+        <!-- Information -->
+      </div>
+
+      <div class="wrapper-information">
+        <!-- header personal information -->
+        <div class="heading-information heading-personal">
+          <h2>Thông tin cá nhân</h2>
+          <p>Nhập thông tin cơ bản của bạn</p>
+        </div>
+
+        <!-- Form Information -->
+        <div class="wapper-form">
+          <div class="wrapper-auth">
+            <div class="form-group">
+              <label>Họ và tên <span class="star-important">*</span></label>
+              <input
+                placeholder="Nhập họ và tên của bạn"
+                class="focus-information"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Mật khẩu <span class="star-important">*</span></label>
+              <input
+                type="password"
+                placeholder="Nhập mật khẩu"
+                class="focus-information"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email <span class="star-important">*</span></label>
+            <input type="email" placeholder="example@domain.com" />
+          </div>
+          <div class="form-group">
+            <label>Ngày sinh <span class="star-important">*</span></label>
+            <input type="date" class="focus-information" />
+          </div>
+          <div class="form-group color-group">
+            <label>Màu yêu thích</label>
+            <input type="color" class="focus-information" />
+          </div>
+          <div>
+            <input type="checkbox" checked />
+            <label>Tôi đồng ý với các điều khoản</label>
+          </div>
+          <div>
+            <label>Ảnh đại diện</label>
+            <input type="file" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Information -->
+      <div>
+        <!-- Header Add Information -->
+        <div>
+          <div class="heading-add heading-information">
+            <h2>Thông tin bổ sung</h2>
+            <p>Cung cấp thêm chi tiết về bạn</p>
+          </div>
+          <div class="wrapper-information wapper-form">
+            <div class="form-group">
+              <div id="heading-range">
+                <label>Mức độ hài lòng (0 - 100) </label>
+                <span>50</span>
+              </div>
+              <input type="range" min="0" max="100" id="slider" />
+            </div>
+            <div class="form-group">
+              <label>Giới tính</label>
+              <select name="cars" id="cars" class="add-focus">
+                <option value="">Chọn giới tính</option>
+                <option value="nam">Nam</option>
+                <option value="nu">Nữ</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Nghề nghiệp</label>
+              <input
+                placeholder="Vui lòng nhập nghề nghiệp hiện tại của bạn"
+                class="add-focus"
+              />
+            </div>
+            <div class="form-group">
+              <label>Ghi chú / Bình luận</label>
+              <textarea
+                rows="4"
+                placeholder="Viết một vài dòng giới thiệu về bản thân...."
+                class="add-focus"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group-btn">
+        <button class="btn-write">Ghi lại thông tin</button>
+        <button class="btn-send">Gửi thông tin</button>
+        <button class="btn-preview">Xem trước</button>
+      </div>
+      <!-- </div> -->
+    </main>
+  </body>
+</html>

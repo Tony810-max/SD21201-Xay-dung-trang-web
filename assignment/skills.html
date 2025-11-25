@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kỹ Năng & Dự Án - Portfolio</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-portfolio-icon-png-image_894644.jpg"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">NV</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html" class="active">Skills</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container skills-page">
+      <section class="page-header">
+        <h1>Kỹ Năng & Dự Án</h1>
+        <p>
+          Danh sách các kỹ năng, công nghệ, và những dự án mình đã thực hiện
+        </p>
+      </section>
+
+      <!-- Completely redesigned technical skills section with better layout -->
+      <section class="technical-skills">
+        <h2>Kỹ Năng Kỹ Thuật</h2>
+        <div class="skills-categories">
+          <div class="skill-category">
+            <h3>Frontend Development</h3>
+            <div class="skill-list">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Web Performance</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend Development</h3>
+            <div class="skill-list">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Database Design</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">RESTful API</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-list">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Vercel</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <div class="skill-list">
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Team Work</span>
+              <span class="skill-tag">Leadership</span>
+              <span class="skill-tag">Time Management</span>
+              <span class="skill-tag">Mentoring</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Complete redesign of projects section with better card layout -->
+      <section class="projects">
+        <h2>Dự Án Nổi Bật</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="./assets/images/e-commerce.webp"
+                alt="E-Commerce Platform"
+              />
+            </div>
+            <div class="project-info">
+              <h3>E-Commerce Platform</h3>
+              <div class="project-meta-info">
+                <span class="meta-badge">📅 Jan 2024 - Mar 2024</span>
+                <span class="meta-badge">👥 5 người</span>
+              </div>
+              <p class="description">
+                Xây dựng một nền tảng thương mại điện tử hoàn chỉnh với các tính
+                năng giỏ hàng, thanh toán, và quản lý đơn hàng.
+              </p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Stripe API</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="./assets/images/Task-manager-apps-scaled.webp"
+                alt="Task Management"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Task Management Application</h3>
+              <div class="project-meta-info">
+                <span class="meta-badge">📅 Oct 2023 - Dec 2023</span>
+                <span class="meta-badge">👥 3 người</span>
+              </div>
+              <p class="description">
+                Ứng dụng quản lý công việc với tính năng real-time
+                collaboration, notifications, và analytics dashboard.
+              </p>
+              <div class="tech-stack">
+                <span>Vue.js</span>
+                <span>Express.js</span>
+                <span>PostgreSQL</span>
+                <span>WebSocket</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./assets/images/weather.webp" alt="Weather App" />
+            </div>
+            <div class="project-info">
+              <h3>Weather Forecast Application</h3>
+              <div class="project-meta-info">
+                <span class="meta-badge">📅 Jul 2023 - Sep 2023</span>
+                <span class="meta-badge">👥 2 người</span>
+              </div>
+              <p class="description">
+                Ứng dụng dự báo thời tiết với giao diện modern, hiển thị dữ liệu
+                theo vị trí, và lịch sử thời tiết.
+              </p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>Weather API</span>
+                <span>Geolocation</span>
+                <span>Chart.js</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./assets/images/social.webp" alt="Social Media" />
+            </div>
+            <div class="project-info">
+              <h3>Social Media Platform</h3>
+              <div class="project-meta-info">
+                <span class="meta-badge">📅 Apr 2023 - Jun 2023</span>
+                <span class="meta-badge">👥 4 người</span>
+              </div>
+              <p class="description">
+                Mạng xã hội nhỏ cho cộng đồng developer với tính năng post,
+                comment, follow, và messaging.
+              </p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Socket.io</span>
+                <span>Redis</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./assets/images/learning.webp" alt="LMS" />
+            </div>
+            <div class="project-info">
+              <h3>Learning Management System</h3>
+              <div class="project-meta-info">
+                <span class="meta-badge">📅 Jan 2023 - Mar 2023</span>
+                <span class="meta-badge">👥 6 người</span>
+              </div>
+              <p class="description">
+                Hệ thống quản lý học tập toàn diện với khóa học, bài kiểm tra,
+                video, và bảng xếp hạng.
+              </p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>FFmpeg</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="./assets/images/dashboard.webp" alt="Dashboard" />
+            </div>
+            <div class="project-info">
+              <h3>Analytics Dashboard</h3>
+              <div class="project-meta-info">
+                <span class="meta-badge">📅 Oct 2022 - Dec 2022</span>
+                <span class="meta-badge">👥 3 người</span>
+              </div>
+              <p class="description">
+                Dashboard analytics hoàn chỉnh với real-time data visualization,
+                reports, và predictive analytics.
+              </p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>D3.js</span>
+                <span>PostgreSQL</span>
+                <span>Python</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Liên Hệ</h4>
+          <p>Email: Quangvu37781@gmail.com</p>
+          <p>Phone: (+84) 793.990.963</p>
+        </div>
+        <div class="footer-section">
+          <h4>Mạng Xã Hội</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/Tony810-max" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nguyen-quang-vu-fe/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/nguyenquangvu123"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nguyễn Quang Vũ. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

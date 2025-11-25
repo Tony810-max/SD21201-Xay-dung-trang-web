@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Portfolio</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-portfolio-icon-png-image_894644.jpg"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">NV</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container blog-page">
+      <section class="page-header">
+        <h1>Blog</h1>
+        <p>Bài viết về lập trình, công nghệ, và kinh nghiệm phát triển web</p>
+      </section>
+
+      <section class="blog-content">
+        <aside class="blog-sidebar">
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Tìm kiếm bài viết..."
+            />
+          </div>
+          <div class="categories">
+            <h3>Danh Mục</h3>
+            <ul>
+              <li><a href="#" onclick="filterCategory('all')">Tất Cả</a></li>
+              <li><a href="#" onclick="filterCategory('react')">React</a></li>
+              <li><a href="#" onclick="filterCategory('css')">CSS</a></li>
+              <li>
+                <a href="#" onclick="filterCategory('backend')">Backend</a>
+              </li>
+              <li>
+                <a href="#" onclick="filterCategory('tutorial')">Tutorial</a>
+              </li>
+            </ul>
+          </div>
+          <div class="recent-posts">
+            <h3>Bài Viết Gần Đây</h3>
+            <ul>
+              <li>
+                <a href="blog-detail-1.html">React Hooks Cho Người Mới</a>
+              </li>
+              <li><a href="blog-detail-2.html">CSS Grid vs Flexbox</a></li>
+              <li>
+                <a href="blog-detail-3.html">Web Performance Optimization</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="blog-posts">
+          <article class="blog-item">
+            <div class="blog-header">
+              <h2>
+                <a href="blog-detail-1.html"
+                  >Hướng Dẫn React Hooks Cho Người Mới Bắt Đầu</a
+                >
+              </h2>
+              <p class="blog-meta">
+                15 Tháng 11, 2024 • <span class="category">React</span>
+              </p>
+            </div>
+            <p class="blog-excerpt">
+              React Hooks là một tính năng mạnh mẽ được giới thiệu trong React
+              16.8 cho phép bạn sử dụng state và các tính năng khác của React mà
+              không cần viết class component. Hôm nay chúng ta sẽ tìm hiểu chi
+              tiết về hooks...
+            </p>
+            <div class="blog-footer">
+              <span class="read-time">5 phút đọc</span>
+              <a href="blog-detail-1.html" class="read-more">Đọc Tiếp →</a>
+            </div>
+          </article>
+
+          <article class="blog-item">
+            <div class="blog-header">
+              <h2>
+                <a href="blog-detail-2.html"
+                  >CSS Grid vs Flexbox: Khi Nào Dùng Cái Nào?</a
+                >
+              </h2>
+              <p class="blog-meta">
+                10 Tháng 11, 2024 • <span class="category">CSS</span>
+              </p>
+            </div>
+            <p class="blog-excerpt">
+              Cả CSS Grid và Flexbox đều là những công cụ layout mạnh mẽ, nhưng
+              khi nào bạn nên dùng cái nào? Bài viết này sẽ giúp bạn hiểu rõ sự
+              khác biệt và cách chọn công cụ phù hợp cho từng trường hợp...
+            </p>
+            <div class="blog-footer">
+              <span class="read-time">7 phút đọc</span>
+              <a href="blog-detail-2.html" class="read-more">Đọc Tiếp →</a>
+            </div>
+          </article>
+
+          <article class="blog-item">
+            <div class="blog-header">
+              <h2>
+                <a href="blog-detail-3.html"
+                  >Web Performance: Tối Ưu Hóa Tốc Độ Trang Web</a
+                >
+              </h2>
+              <p class="blog-meta">
+                5 Tháng 11, 2024 • <span class="category">Backend</span>
+              </p>
+            </div>
+            <p class="blog-excerpt">
+              Hiệu năng web là một yếu tố quan trọng ảnh hưởng đến trải nghiệm
+              người dùng và SEO. Bài viết này sẽ hướng dẫn bạn các chiến lược
+              tối ưu hóa performance bao gồm lazy loading, code splitting,
+              caching...
+            </p>
+            <div class="blog-footer">
+              <span class="read-time">8 phút đọc</span>
+              <a href="blog-detail-3.html" class="read-more">Đọc Tiếp →</a>
+            </div>
+          </article>
+
+          <article class="blog-item">
+            <div class="blog-header">
+              <h2>
+                <a href="#blog-4">Học Express.js Từ Cơ Bản Đến Nâng Cao</a>
+              </h2>
+              <p class="blog-meta">
+                1 Tháng 11, 2024 • <span class="category">Backend</span>
+              </p>
+            </div>
+            <p class="blog-excerpt">
+              Express.js là một framework phổ biến để xây dựng REST API với
+              Node.js. Trong bài viết này, chúng ta sẽ học cách setup project,
+              tạo routes, middleware, error handling, và authenticate users...
+            </p>
+            <div class="blog-footer">
+              <span class="read-time">10 phút đọc</span>
+              <a href="#blog-4" class="read-more">Đọc Tiếp →</a>
+            </div>
+          </article>
+
+          <article class="blog-item">
+            <div class="blog-header">
+              <h2>
+                <a href="#blog-5"
+                  >JavaScript Async/Await: Hướng Dẫn Toàn Diện</a
+                >
+              </h2>
+              <p class="blog-meta">
+                28 Tháng 10, 2024 • <span class="category">Tutorial</span>
+              </p>
+            </div>
+            <p class="blog-excerpt">
+              Async/await là cách modern để xử lý asynchronous code trong
+              JavaScript. Nó giúp code dễ đọc hơn callback và Promise. Hôm nay
+              chúng ta sẽ tìm hiểu cách sử dụng async/await trong các tình huống
+              thực tế...
+            </p>
+            <div class="blog-footer">
+              <span class="read-time">6 phút đọc</span>
+              <a href="#blog-5" class="read-more">Đọc Tiếp →</a>
+            </div>
+          </article>
+
+          <article class="blog-item">
+            <div class="blog-header">
+              <h2>
+                <a href="#blog-6">TypeScript: Tại Sao Bạn Nên Sử Dụng Nó?</a>
+              </h2>
+              <p class="blog-meta">
+                22 Tháng 10, 2024 • <span class="category">Tutorial</span>
+              </p>
+            </div>
+            <p class="blog-excerpt">
+              TypeScript thêm type safety vào JavaScript, giúp phát hiện lỗi sớm
+              hơn và làm code dễ maintain hơn. Bài viết này sẽ hướng dẫn bạn bắt
+              đầu với TypeScript, từ cấu hình đến các tính năng nâng cao...
+            </p>
+            <div class="blog-footer">
+              <span class="read-time">9 phút đọc</span>
+              <a href="#blog-6" class="read-more">Đọc Tiếp →</a>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Liên Hệ</h4>
+          <p>Email: Quangvu37781@gmail.com</p>
+          <p>Phone: (+84) 793.990.963</p>
+        </div>
+        <div class="footer-section">
+          <h4>Mạng Xã Hội</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/Tony810-max" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nguyen-quang-vu-fe/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/nguyenquangvu123"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nguyễn Quang Vũ. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function filterCategory(category) {
+        console.log("Filter by category:", category);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hướng Dẫn React Hooks - Blog Detail</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-portfolio-icon-png-image_894644.jpg"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">NV</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container blog-detail-page">
+      <article class="blog-detail">
+        <header class="blog-detail-header">
+          <h1>Hướng Dẫn React Hooks Cho Người Mới Bắt Đầu</h1>
+          <div class="blog-detail-meta">
+            <span class="date">15 Tháng 11, 2024</span>
+            <span class="category">React</span>
+            <span class="read-time">5 phút đọc</span>
+          </div>
+          <img
+            src="/placeholder.svg?height=400&width=800"
+            alt="React Hooks Illustration"
+          />
+        </header>
+
+        <div class="blog-detail-content">
+          <h2>Giới Thiệu</h2>
+          <p>
+            React Hooks là một tính năng mạnh mẽ được giới thiệu trong React
+            16.8 cho phép bạn sử dụng state và các tính năng khác của React mà
+            không cần viết class component. Hooks đã thay đổi cách chúng ta viết
+            React code, làm cho nó trở nên đơn giản hơn và dễ bảo trì hơn.
+          </p>
+
+          <h2>useState Hook</h2>
+          <p>
+            useState là hook cơ bản nhất. Nó cho phép bạn thêm state vào
+            functional component:
+          </p>
+          <pre><code>import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Increment
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+          <p>
+            Trong ví dụ này, chúng ta sử dụng useState để tạo một state variable
+            count. setCount là function để update state này.
+          </p>
+
+          <h2>useEffect Hook</h2>
+          <p>
+            useEffect cho phép bạn thực hiện side effects trong functional
+            components. Nó hoạt động như componentDidMount, componentDidUpdate,
+            và componentWillUnmount được kết hợp:
+          </p>
+          <pre><code>import React, { useEffect, useState } from 'react';
+
+function User() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Fetch user data
+    fetch('/api/user')
+      .then(res =&gt; res.json())
+      .then(data =&gt; setUser(data));
+  }, []); // Empty dependency array means run once
+
+  if (!user) return &lt;div&gt;Loading...&lt;/div&gt;;
+  
+  return &lt;div&gt;{user.name}&lt;/div&gt;;
+}</code></pre>
+
+          <h2>Custom Hooks</h2>
+          <p>
+            Bạn cũng có thể tạo custom hooks để reuse logic giữa các components:
+          </p>
+          <pre><code>function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch(url)
+      .then(res =&gt; res.json())
+      .then(data =&gt; {
+        setData(data);
+        setLoading(false);
+      })
+      .catch(err =&gt; {
+        setError(err);
+        setLoading(false);
+      });
+  }, [url]);
+
+  return { data, loading, error };
+}</code></pre>
+
+          <h2>Kết Luận</h2>
+          <p>
+            React Hooks là một cách tuyệt vời để viết React code sạch và dễ bảo
+            trì. Bắt đầu với useState và useEffect, sau đó khám phá các hooks
+            khác như useContext, useReducer, v.v. Hãy thực hành và tạo các
+            custom hooks để reuse logic trong ứng dụng của bạn.
+          </p>
+
+          <div class="blog-tags">
+            <span class="tag">React</span>
+            <span class="tag">Hooks</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Web Development</span>
+          </div>
+
+          <div class="blog-navigation">
+            <a href="blog.html" class="btn btn-secondary">← Quay Lại Blog</a>
+            <a href="blog-detail-2.html" class="btn btn-secondary"
+              >Bài Tiếp Theo →</a
+            >
+          </div>
+        </div>
+
+        <aside class="blog-sidebar">
+          <div class="related-posts">
+            <h3>Bài Viết Liên Quan</h3>
+            <ul>
+              <li><a href="blog-detail-2.html">CSS Grid vs Flexbox</a></li>
+              <li>
+                <a href="blog-detail-3.html">Web Performance Optimization</a>
+              </li>
+            </ul>
+          </div>
+          <div class="share-section">
+            <h3>Chia Sẻ Bài Viết</h3>
+            <div class="share-buttons">
+              <a href="#" class="share-btn">Facebook</a>
+              <a href="#" class="share-btn">Twitter</a>
+              <a href="#" class="share-btn">LinkedIn</a>
+            </div>
+          </div>
+        </aside>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Liên Hệ</h4>
+          <p>Email: Quangvu37781@gmail.com</p>
+          <p>Phone: (+84) 793.990.963</p>
+        </div>
+        <div class="footer-section">
+          <h4>Mạng Xã Hội</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/Tony810-max" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nguyen-quang-vu-fe/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/nguyenquangvu123"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nguyễn Quang Vũ. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

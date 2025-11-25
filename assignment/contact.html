@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên Hệ - Portfolio</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-portfolio-icon-png-image_894644.jpg"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">NV</a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container contact-page">
+      <section class="page-header">
+        <h1>Liên Hệ Với Tôi</h1>
+        <p>
+          Hãy để lại thông tin liên hệ của bạn hoặc kết nối với tôi qua các nền
+          tảng khác
+        </p>
+      </section>
+
+      <section class="contact-content">
+        <div class="contact-info">
+          <h2>Thông Tin Liên Hệ</h2>
+
+          <div class="info-item">
+            <h3>📧 Email</h3>
+            <p>
+              <a href="mailto:Quangvu37781@gmail.com">Quangvu37781@gmail.com</a>
+            </p>
+            <p>Tôi sẽ trả lời email của bạn trong vòng 24 giờ.</p>
+          </div>
+
+          <div class="info-item">
+            <h3>📱 Điện Thoại</h3>
+            <p><a href="tel:+84900000000">(+84) 793.990.963</a></p>
+            <p>Gọi cho tôi vào giờ hành chính (8h-17h).</p>
+          </div>
+
+          <div class="info-item">
+            <h3>📍 Địa Chỉ</h3>
+            <p>Đà Nẵng, Việt Nam</p>
+            <p>Tôi sẵn sàng họp mặt để thảo luận các dự án lớn.</p>
+          </div>
+
+          <div class="info-item">
+            <h3>⏰ Giờ Làm Việc</h3>
+            <p>Thứ 2 - Thứ 6: 9:00 AM - 6:00 PM (GMT+7)</p>
+            <p>Thứ 7 & Chủ Nhật: Liên hệ theo lịch hẹn</p>
+          </div>
+
+          <div class="social-links">
+            <h3>Mạng Xã Hội</h3>
+            <div class="social-buttons">
+              <a
+                href="https://github.com/Tony810-max"
+                target="_blank"
+                class="social-btn"
+                >GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/nguyen-quang-vu-fe/"
+                target="_blank"
+                class="social-btn"
+                >LinkedIn</a
+              >
+              <a
+                href="https://www.facebook.com/nguyenquangvu123"
+                target="_blank"
+                class="social-btn"
+                >Facebook</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <h2>Gửi Thông Điệp</h2>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Tên Của Bạn</label>
+              <input type="text" id="name" name="name" required />
+              <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Số Điện Thoại (Tùy Chọn)</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Chủ Đề</label>
+              <select id="subject" name="subject" required>
+                <option value="">Chọn chủ đề</option>
+                <option value="project">Hợp Tác Dự Án</option>
+                <option value="consultation">Tư Vấn</option>
+                <option value="freelance">Công Việc Freelance</option>
+                <option value="job">Cơ Hội Việc Làm</option>
+                <option value="feedback">Phản Hồi</option>
+                <option value="other">Khác</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tin Nhắn</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="7"
+                required
+              ></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
+
+            <div class="form-group checkbox">
+              <input type="checkbox" id="subscribe" name="subscribe" />
+              <label for="subscribe">Tôi muốn nhận bản tin email</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">
+              Gửi Thông Điệp
+            </button>
+            <span
+              class="success-message"
+              id="successMessage"
+              style="display: none"
+              >Cảm ơn! Tôi sẽ liên hệ với bạn sớm nhất.</span
+            >
+          </form>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h2>Các Câu Hỏi Thường Gặp</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Bạn nhận freelance project không?</h3>
+            <p>
+              Vâng, tôi nhận các freelance project. Liên hệ với tôi để thảo luận
+              chi tiết về dự án, timeline, và budget của bạn.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Giá của bạn như thế nào?</h3>
+            <p>
+              Giá cả phụ thuộc vào độ phức tạp, timeline, và phạm vi của dự án.
+              Tôi sẽ cung cấp quote chi tiết sau khi thảo luận.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Bạn có làm việc remote không?</h3>
+            <p>
+              Có, tôi hoàn toàn có thể làm việc remote. Tôi cũng sẵn sàng gặp
+              mặt nếu bạn ở Hà Nội.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Timeline phát triển bao lâu?</h3>
+            <p>
+              Timeline tùy thuộc vào phạm vi dự án. Tôi sẽ cung cấp ước tính chi
+              tiết dựa trên yêu cầu của bạn.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Bạn có hỗ trợ sau khi hoàn thành dự án không?</h3>
+            <p>
+              Có, tôi cung cấp 3 tháng support sau hoàn thành dự án. Hỗ trợ thêm
+              có thể được thương lượng.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Làm cách nào để bắt đầu?</h3>
+            <p>
+              Gửi thông điệp qua form liên hệ hoặc email. Chúng ta sẽ lên kế
+              hoạch cuộc gọp video để thảo luận chi tiết.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Liên Hệ</h4>
+          <p>Email: Quangvu37781@gmail.com</p>
+          <p>Phone: (+84) 793.990.963</p>
+        </div>
+        <div class="footer-section">
+          <h4>Mạng Xã Hội</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/Tony810-max" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nguyen-quang-vu-fe/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/nguyenquangvu123"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nguyễn Quang Vũ. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
