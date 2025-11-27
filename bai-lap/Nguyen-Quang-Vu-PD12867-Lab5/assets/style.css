@@ -152,7 +152,7 @@ main {
 }
 
 .group-btn {
-  margin-top: 16px;
+  padding: 16px 0;
   display: flex;
   gap: 4px;
 }
