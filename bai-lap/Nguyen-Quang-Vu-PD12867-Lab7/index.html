@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 7 - Media Integration</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>🎬 Lab 7</h1>
+        <p>Trang Web Tích Hợp Đa Phương Tiện</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Audio Section -->
+        <div class="media-section">
+          <h2>🎵 Chèn 1 Audio File (.mp3)</h2>
+          <p>Phát nhạc nền hoặc podcast:</p>
+          <audio controls>
+            <source src="./assets/mp3/music.mp3" type="audio/mpeg" />
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+          </audio>
+        </div>
+
+        <!-- Video Local Section -->
+        <div class="media-section">
+          <h2>🎥 Chèn 1 Video File (.mp4)</h2>
+          <p>Video tự động phát, tắt tiếng khi tải trang:</p>
+          <video controls autoplay muted>
+            <source src="./assets/videos/screen.mp4" type="video/mp4" />
+            Trình duyệt của bạn không hỗ trợ thẻ video.
+          </video>
+        </div>
+
+        <!-- YouTube Video Section -->
+        <div class="media-section">
+          <h2>📺 Chèn 1 Video từ YouTube</h2>
+          <p>Video tự động phát, tắt tiếng, ẩn thanh công cụ:</p>
+          <div class="youtube-container">
+            <iframe
+              src="https://www.youtube.com/embed/Z6uylatF5VY?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&playsinline=1"
+              title="YouTube video"
+              allow="autoplay"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>✓ Lab 7 - Hoàn thành các yêu cầu HTML5 Media Integration</p>
+      </div>
+    </div>
+  </body>
+</html>
