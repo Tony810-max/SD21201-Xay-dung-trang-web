@@ -13,6 +13,8 @@ class ProductController {
     const categories = this.model.getCategories();
     this.view.render(products, categories, this.model.formatPrice);
     this.view.bindFilterButtons(this.handleFilter.bind(this));
+    this.view.bindProductButtons(this.handleViewProduct.bind(this));
+    this.view.bindModalClose();
   }
 
   handleFilter(category) {
@@ -23,6 +25,15 @@ class ProductController {
       products = this.model.getProductsByCategory(category);
     }
     this.view.updateProductList(products, this.model.formatPrice);
+  }
+
+  handleViewProduct(productId) {
+    const product = this.model.getProductById(productId);
+    if (!product) {
+      return;
+    }
+
+    this.view.showProductModal(product, this.model.formatPrice);
   }
 }
 
